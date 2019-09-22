@@ -21,14 +21,14 @@ class Cell extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(evt) {
-    this.props.flipCellsAround(this.props.value);
+  handleClick(e) {
+    this.props.flipCellsAround();
   }
 
   render() {
     let classes = "Cell" + (this.props.isLit ? " Cell-lit" : "");
     return (
-        <td className={classes} value={this.props.value} onClick={this.handleClick} />
+        <td className={classes} onClick={this.handleClick} />
     )
   }
 }
